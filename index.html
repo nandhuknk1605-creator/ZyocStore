@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>ZYOCSTORE</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+<div class="logo">ZYOC STORE</div>
+<ul>
+<li><a href="#models">Models</a></li>
+<li><a href="#config">Build</a></li>
+<li><a href="#performance">Quality</a></li>
+</ul>
+</nav>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>Discover Your Style</h1>
+    <a href="#models" class="btn">Shop Now</a>
+  </div>
+</section>
+
+<section id="models" class="models">
+<h2>Choose Your Category</h2>
+<div class="model-buttons">
+<button class="active" onclick="changeCar(0,this)">MENS</button>
+<button onclick="changeCar(1,this)">WOMENS</button>
+<button onclick="changeCar(2,this)">KIDS</button>
+</div>
+<div class="car-display">
+<img id="carImage" src="Images/img01.png">
+</div>
+</section>
+
+<section id="config" class="config">
+<h2>Our Products</h2>
+<div class="product-grid">
+<!-- keep your product cards EXACTLY same here -->
+</div>
+</section>
+
+<section id="performance" class="split">
+<div class="text">
+<h2>Premium Quality Fabrics</h2>
+<p>All our products are made with premium quality materials, ensuring comfort, durability, and style.</p>
+</div>
+<div class="img"></div>
+</section>
+
+<section class="cta">
+<h2>Explore Our New Collection</h2>
+<p>Be the first to see our latest arrivals</p>
+</section>
+
+<footer>© 2026 ZYOC Store - Premium Fashion</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
