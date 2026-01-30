@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>ZYOCSTORE</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="Store.css">
+</head>
+
+<body>
+
+<nav>
+<div class="logo">ZYOC STORE</div>
+<ul>
+<li><a href="#models">Models</a></li>
+<li><a href="#config">Build</a></li>
+<li><a href="#performance">Quality</a></li>
+</ul>
+  <button id="cartBtn" class="cart-button">Cart (<span id="cartCount">0</span>)</button>
+</nav>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>Discover Your Style</h1>
+    <a href="#models" class="btn">Shop Now</a>
+  </div>
+</section>
+
+<section id="models" class="models">
+<h2>Choose Your Category</h2>
+<div class="model-buttons">
+<button class="active" onclick="changeCar(0,this)">MENS</button>
+<button onclick="changeCar(1,this)">WOMENS</button>
+<button onclick="changeCar(2,this)">KIDS</button>
+</div>
+<div class="car-display">
+  <img id="carImage" src="Images/Panty01.jpg">
+</div>
+</section>
+
+<section id="config" class="config">
+<h2>Our Products</h2>
+<div class="product-grid">
+  <div class="product-card">
+    <img src="Images/IMG20260119092805.png" alt="Women panty 01">
+    <h3>c</h3>
+    <p class="price">₹1,299</p>
+    <button class="buy-btn" onclick="addToCart(0)">Add to Cart</button>
+  </div>
+  <div class="product-card">
+    <img src="Images/IMG20260119093111.png" alt="Women panty 02">
+    <h3>Women panty 02</h3>
+    <p class="price">₹1,799</p>
+    <button class="buy-btn" onclick="addToCart(1)">Add to Cart</button>
+  </div>
+  <div class="product-card">
+    <img src="Images/IMG20260119093748.png" alt="Women panty 03">
+    <h3>Women panty 03</h3>
+    <p class="price">₹699</p>
+    <button class="buy-btn" onclick="addToCart(2)">Add to Cart</button>
+  </div>
+  <div class="product-card">
+    <img src="Images/IMG20260119094241.png" alt="Women panty 04">
+    <h3>Women panty 04 </h3>
+    <p class="price">₹2,499</p>
+    <button class="buy-btn" onclick="addToCart(3)">Add to Cart</button>
+  </div>
+  <div class="product-card">
+    <img src="Images/Front.png" alt="Women Panty 05">
+    <h3>Women panty 05</h3>
+    <p class="price">₹1,599</p>
+    <button class="buy-btn" onclick="addToCart(4)">Add to Cart</button>
+  </div>
+</div>
+</section>
+
+<!-- Cart panel -->
+<div id="cartPanel" class="cart-panel" aria-hidden="true">
+  <div class="cart-header">
+    <h3>Your Cart</h3>
+    <button id="closeCart">Close</button>
+  </div>
+  <div class="cart-items"></div>
+  <div class="cart-footer">
+    <div class="cart-total">Total: ₹0</div>
+    <button id="checkoutBtn" class="buy-btn">Checkout</button>
+  </div>
+</div>
+
+<section id="performance" class="split">
+<div class="text">
+<h2>Premium Quality Fabrics</h2>
+<p>All our products are made with premium quality materials, ensuring comfort, durability, and style.</p>
+</div>
+<div class="img"></div>
+</section>
+
+<section class="cta">
+<h2>Explore Our New Collection</h2>
+<p>Be the first to see our latest arrivals</p>
+</section>
+
+<footer>© 2026 ZYOC Store - Premium Fashion</footer>
+
+<script src="Store.js"></script>
+</body>
+</html>

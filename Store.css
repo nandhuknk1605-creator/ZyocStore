@@ -1,0 +1,83 @@
+*{margin:0;padding:0;box-sizing:border-box}
+
+:root{
+  --bg-color:#000;
+  --text-color:#fff;
+}
+
+body{
+  font-family:'Inter',sans-serif;
+  background:var(--bg-color);
+  color:var(--text-color);
+  transition:background .8s ease,color .8s ease;
+  overflow-x:hidden;
+}
+
+h1,h2{font-family:'Playfair Display',serif}
+a{text-decoration:none;color:white}
+html{scroll-behavior:smooth}
+
+/* NAV */
+nav{
+position:fixed;width:100%;padding:20px 8%;
+display:flex;justify-content:space-between;align-items:center;
+background:rgba(0,0,0,.5);backdrop-filter:blur(10px);z-index:1000}
+nav ul{display:flex;gap:35px;list-style:none;font-size:14px}
+.logo{font-weight:600;letter-spacing:2px}
+
+/* HERO */
+.hero{
+position:relative;height:100vh;display:flex;
+justify-content:center;align-items:center;text-align:center;
+background:url("Images/img02.png") center/contain no-repeat;
+}
+.hero::after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.6)}
+.hero-content{position:relative;z-index:2}
+.hero h1{font-size:70px;margin-bottom:20px}
+
+.btn{padding:14px 40px;border:1px solid white;font-size:12px;letter-spacing:2px;transition:.3s}
+.btn:hover{background:white;color:black}
+
+/* MODELS */
+.models{background:#111;text-align:center;padding:100px 8%}
+.model-buttons{margin:40px 0}
+.model-buttons button{background:none;border:1px solid #1d1d1d;color:#fff;padding:10px 25px;margin:5px;cursor:pointer}
+.car-display{max-width:900px;margin:auto;padding:20px}
+.car-display img{max-width:100%;height:auto}
+
+/* PRODUCTS */
+.config{background:#fff;color:#000;text-align:center;padding:80px 5%}
+.product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:1200px;margin:auto}
+
+/* Product card */
+.product-card{background:#fff;color:#000;border-radius:8px;overflow:hidden;padding:12px;text-align:left;display:flex;flex-direction:column;align-items:center}
+.product-card img{width:100%;height:180px;object-fit:cover;border-radius:6px}
+.product-card h3{margin:12px 0 6px;font-size:18px}
+.price{font-weight:600;margin-bottom:8px}
+.buy-btn{background:#000;color:#fff;border:none;padding:10px 16px;border-radius:6px;cursor:pointer}
+.buy-btn:hover{opacity:.9}
+
+/* Cart button */
+.cart-button{background:none;border:1px solid rgba(255,255,255,.12);color:var(--text-color);padding:8px 12px;border-radius:6px;cursor:pointer}
+
+/* Cart panel */
+.cart-panel{position:fixed;right:20px;top:80px;width:340px;max-height:70vh;background:#fff;color:#000;border-radius:8px;box-shadow:0 8px 30px rgba(0,0,0,.2);padding:12px;transform:translateY(-10px);opacity:0;pointer-events:none;transition:all .2s}
+.cart-panel.open{transform:translateY(0);opacity:1;pointer-events:auto}
+.cart-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.cart-items{overflow:auto;max-height:48vh;padding-right:8px}
+.cart-item{display:flex;gap:10px;align-items:center;padding:8px 0;border-bottom:1px solid #eee}
+.cart-item img{width:64px;height:64px;object-fit:cover;border-radius:6px}
+.ci-info{flex:1}
+.remove-btn{background:transparent;border:1px solid #ddd;padding:6px 8px;border-radius:6px;cursor:pointer}
+.cart-footer{display:flex;justify-content:space-between;align-items:center;margin-top:12px}
+
+/* SPLIT */
+.split{display:flex;flex-wrap:wrap;background:#111;color:#fff}
+.split .text{flex:1;padding:80px}
+.split .img{flex:1;min-height:500px;background:url('Images/img03.png') center/cover}
+
+/* CTA */
+.cta{text-align:center;background:#f5f5f5;color:#000;padding:100px 8%}
+
+/* FOOTER */
+footer{text-align:center;padding:40px;background:#050505;font-size:14px;opacity:.6}
